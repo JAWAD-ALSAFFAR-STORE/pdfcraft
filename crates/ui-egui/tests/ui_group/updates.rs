@@ -47,6 +47,7 @@ fn versions_compare_by_number() {
 }
 
 #[test]
+#[ignore = "JAS: Check for updates is hidden from the Help menu until JAS has its own release location"]
 fn a_newer_release_is_offered_for_download() {
     let mut h = harness(Ok("v99.0.0"));
     h.state_mut().execute("help.check_updates");
@@ -59,6 +60,7 @@ fn a_newer_release_is_offered_for_download() {
 }
 
 #[test]
+#[ignore = "JAS: Check for updates is hidden from the Help menu until JAS has its own release location"]
 fn an_up_to_date_or_failed_check_says_so() {
     let mut h = harness(Ok(concat!("v", env!("CARGO_PKG_VERSION"))));
     h.state_mut().execute("help.check_updates");
@@ -73,6 +75,7 @@ fn an_up_to_date_or_failed_check_says_so() {
 }
 
 #[test]
+#[ignore = "JAS: Check for updates is hidden from the Help menu until JAS has its own release location"]
 fn nothing_is_asked_until_the_user_checks() {
     // No check at start (the owner's decision): the source is only called from the command.
     let calls = Arc::new(std::sync::atomic::AtomicUsize::new(0));

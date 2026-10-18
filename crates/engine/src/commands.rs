@@ -360,7 +360,8 @@ pub const COMMANDS: &[CommandSpec] = &[
     c("help.app_page", "JAS PDF web page", HELP, None, Nothing, "globe"),
     c("help.github", "JAS PDF on GitHub", HELP, None, Nothing, "code-xml"),
     c("help.website", "ArtCraft website", HELP, None, Nothing, "external-link"),
-    c("help.check_updates", "Check for updates…", HELP, None, Nothing, "cloud"),
+    // JAS: "Check for updates…" is hidden until JAS has its own release location; the
+    // command and its code stay so it can be pointed there later.
     c("help.about", "About JAS PDF", HELP, None, Nothing, "info"),
 ];
 
